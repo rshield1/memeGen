@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -50,20 +51,20 @@ header {
   display: flex;
   align-items: center;
   background: #6441A5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #084516, #41a3a5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #124508, #41a3a5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header > img {
   height: 80%;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 header > p {
   font-family: VT323, monospace;
   color: whitesmoke;
-  font-size: 50px;
-  margin-left: 60px;
+  font-size: 40px;
+  margin: auto;
 }
 
 .meme {
@@ -127,26 +128,26 @@ header > p {
   font-size: 25px;
   letter-spacing: 1.5px;
   color: white;
-  background: #6441A5;
+  background:rgb(17, 138, 126);
 }
 
 .meme-form > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 font-family: VT323, monospace;
 font-size: 25px;
-text-align: cen
+text-align: center
 }
 .meme-form > input::-moz-placeholder { /* Firefox 19+ */
 font-family: VT323, monospace;
 font-size: 25px;
-text-align: cen
+text-align: center
 }
 .meme-form > input:-ms-input-placeholder { /* IE 10+ */
 font-family: VT323, monospace;
 font-size: 25px;
-text-align: cen
+text-align: center
 }
 .meme-form > input:-moz-placeholder { /* Firefox 18- */
 font-family: VT323, monospace;
 font-size: 25px;
-text-align: cen
+text-align: center
 }

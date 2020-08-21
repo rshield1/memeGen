@@ -4,9 +4,9 @@ import React from "react";
 function Header() {
     return (
         <header>
-            <img src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png" 
+            <img src="https://www.pngmart.com/files/12/Funny-Sticker-Emoji-PNG-Image.png" 
             alt="troll"/>
-            <p>Meme Generator</p>
+            <p>Rob's Meme Gen</p>
 
 
         </header>
