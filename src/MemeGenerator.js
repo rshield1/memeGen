@@ -11,6 +11,8 @@ class MemeGenerator extends Component {
             randomImg: 'http://i.imgflip.com/1bij.jpg',
             allMemeImgs: []
         }
+        // used to bind the function to this
+        this.handleChange = this.handleChange.bind(this)
     }
 
     // Fetch data from api to frontend at the beginning
@@ -20,9 +22,14 @@ class MemeGenerator extends Component {
         .then(res => res.json())
         .then(response => {
             const { memes } = response.data
-            console.log(memes[0])
             this.setState({ allMemeImgs: memes })
         })
+    }
+
+
+    handleChange(event){
+        const { name, value } = event.target
+        this.setState( { [name]: value })
     }
 
 
@@ -35,16 +42,24 @@ class MemeGenerator extends Component {
                     name="topText" 
                     placeholder="Top Text" 
                     value={this.state.topText}
+                    onChange={this.handleChange}
                     />
                 <input 
                     type="text" 
                     name="bottomText" 
                     placeholder="Bottom Text" 
                     value={this.state.bottomText}
+                    onChange={this.handleChange}
                     />
 
                     <button>Generate</button>
                 </form>
+
+                <div className="meme">
+                    <img src={this.state.randomImg} alt="" />
+                    <h2 className="top">{this.state.topText}</h2>
+                    <h2 className="bottom">{this.state.bottomText}</h2>
+                </div>
             </div>
         )
     }
