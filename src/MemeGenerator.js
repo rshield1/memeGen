@@ -13,6 +13,7 @@ class MemeGenerator extends Component {
         }
         // used to bind the function to this
         this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     // Fetch data from api to frontend at the beginning
@@ -29,14 +30,22 @@ class MemeGenerator extends Component {
 
     handleChange(event){
         const { name, value } = event.target
+        // i will console.log here later
         this.setState( { [name]: value })
+    }
+
+    handleSubmit(event){
+        event.preventDefault()
+        const randomNum = Math.floor(Math.random() * this.state.allMemeImgs.length)
+        const randomMeme = this.state.allMemeImgs[randomNum].url 
+        this.setState({ randomImg: randomMeme })
     }
 
 
     render() {
         return (
             <div>
-                <form className="meme-form">
+                <form className="meme-form" onSubmit={this.handleSubmit}>
                 <input 
                     type="text" 
                     name="topText" 
